@@ -33,8 +33,6 @@ if (currentMinute < 10) {
 let inputDate = document.querySelector(".date");
 inputDate.innerHTML = `${currentDay} ${currentDate} ${currentMonth}, ${currentHour} : ${currentMinute}`;
 
-
-
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
 
@@ -42,7 +40,7 @@ function showWeather(response) {
   let temp = document.querySelector("#temperature");
   temp.innerHTML = `${currentTemperature}`;
 
-  let currentHumidity = (response.data.main.humidity);
+  let currentHumidity = response.data.main.humidity;
   let humidity = document.querySelector("#humi");
   humidity.innerHTML = `Humidity: ${currentHumidity} %`;
 
@@ -53,17 +51,23 @@ function showWeather(response) {
   let currentClouds = Math.round(response.data.clouds.all);
   let clouds = document.querySelector("#clouds");
   clouds.innerHTML = `Clouds: ${currentClouds}%`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-
-function inputCity (event) {
+function inputCity(event) {
   event.preventDefault();
+  let iconElement = document.querySelector("#icon");
+
   let typedCity = document.querySelector("#currentCity").value;
   let titleCity = document.querySelector("#city");
   titleCity.innerHTML = `${typedCity}`;
   search(typedCity);
 }
-
 
 function search(typedCity) {
   let apiKey = "e450bc345a80a08ada69fd5c714d871d";
@@ -71,8 +75,7 @@ function search(typedCity) {
   axios.get(apiUrl).then(showWeather);
 }
 
-
-function searchLocation (position) {
+function searchLocation(position) {
   let apiKey = "e450bc345a80a08ada69fd5c714d871d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);

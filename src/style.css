@@ -43,7 +43,7 @@ h2 {
   font-size: 60px;
   font-family: "Patrick Hand", cursive;
   line-height: 0.5;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 a {
@@ -94,10 +94,14 @@ button.hover {
 }
 
 .fa-solid {
-  color: #655266;
   padding: 50px;
 }
 .d-flex {
   border: 5px;
   height: 40px;
+}
+
+.float-right {
+  margin-bottom: 30px;
+  margin-left: 40px;
 }
