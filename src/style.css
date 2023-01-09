@@ -40,11 +40,10 @@ h2 {
   font-family: "Patrick Hand", cursive;
 }
 .subtitle {
-  display: inline;
   font-size: 60px;
   font-family: "Patrick Hand", cursive;
   line-height: 0.5;
-  margin-left: -30px;
+  margin-left: 40px;
 }
 
 a {
@@ -102,4 +101,3 @@ button.hover {
   border: 5px;
   height: 40px;
 }
-
