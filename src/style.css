@@ -84,9 +84,10 @@ a {
   border-radius: 5px;
   color: white;
   border: 5px;
-  height: 40px;
-  width: 200px;
-  margin-left: 10px;
+  height: 35px;
+  width: 150px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 button.hover {
@@ -104,4 +105,10 @@ button.hover {
 .float-right {
   margin-bottom: 30px;
   margin-left: 40px;
+}
+
+.fa-solid.fa-location-arrow {
+  color: white;
+  display: inline;
+  margin-left: -10px;
 }

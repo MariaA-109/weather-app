@@ -95,3 +95,13 @@ search("Berlin");
 
 let locationButton = document.querySelector("#locationButton");
 locationButton.addEventListener("click", getCurrentLocation);
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheitDegree");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
