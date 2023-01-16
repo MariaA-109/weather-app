@@ -66,7 +66,6 @@ function showWeather(response) {
 function inputCity(event) {
   event.preventDefault();
   let iconElement = document.querySelector("#icon");
-
   let typedCity = document.querySelector("#currentCity").value;
   let titleCity = document.querySelector("#city");
   titleCity.innerHTML = `${typedCity}`;
