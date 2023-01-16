@@ -31,14 +31,18 @@ if (currentMinute < 10) {
 }
 
 let inputDate = document.querySelector(".date");
-inputDate.innerHTML = `${currentDay} ${currentDate} ${currentMonth}, ${currentHour} : ${currentMinute}`;
+inputDate.innerHTML = `${currentDay} ${currentDate} ${currentMonth} ${currentHour} : ${currentMinute}`;
 
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
 
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].main;
+
   let currentTemperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temperature");
   temp.innerHTML = `${currentTemperature}`;
+  celsiusTemperature = response.data.main.temp;
 
   let currentHumidity = response.data.main.humidity;
   let humidity = document.querySelector("#humi");
@@ -107,13 +111,16 @@ function showFahrenheitTemperature(event) {
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
-
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheitDegree");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsiusDegree");
-celciusLink.addEventListener("click", showCelsiusTemperature);
+celsiusLink.addEventListener("click", showCelsiusTemperature);
