@@ -33,49 +33,28 @@ if (currentMinute < 10) {
 let inputDate = document.querySelector(".date");
 inputDate.innerHTML = `${currentDay} ${currentDate} ${currentMonth} ${currentHour} : ${currentMinute}`;
 
-function showForecast(response) {
+function showForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `
-  <div class="weather-forecast" id="forecast">
-    <div class="row">
-       <div class="col-2">
-          <div class="weather-forecast-date">Tue</div>
-              <img
-                   src="http://openweathermap.org/img/wn/50d@2x.png"
-                    alt=""
-                   width="50"
-              />
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+         <div class="weather-forecast-date">${day}</div>
+           <img
+              src="http://openweathermap.org/img/wn/50d@2x.png"
+              alt=""
+              width="50"/>
               <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max"> 3° </span>
-                <span class="weather-forecast-temperature-min"> 1° </span>
+              <span class="weather-forecast-temperature-max"> 3° </span>
+              <span class="weather-forecast-temperature-min"> 1° </span>
             </div>
           </div>
-        </div>
      `;
-  forecastHTML =
-    forecastHTML +
-    `
-    <div class="weather-forecast" id="forecast">
-    <div class="row">
-       <div class="col-2">
-          <div class="weather-forecast-date">Tue</div>
-              <img
-                   src="http://openweathermap.org/img/wn/50d@2x.png"
-                    alt=""
-                   width="50"
-              />
-              <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max"> 3° </span>
-                <span class="weather-forecast-temperature-min"> 1° </span>
-            </div>
-          </div>
-        </div>
-     `;
-  forecastHTML = forecast + `</div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -119,7 +98,7 @@ function inputCity(event) {
 }
 
 function search(typedCity) {
-  let apiKey = "e450bc345a80a08ada69fd5c714d871d";
+  let apiKey = "c5f0e59acac64258bb92ed027d20c68f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${typedCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
