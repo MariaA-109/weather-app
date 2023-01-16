@@ -93,8 +93,6 @@ a {
 
 button.hover {
   cursor: pointer;
-  color: black;
-  background-color: white;
 }
 
 .fa-solid {
@@ -112,4 +110,20 @@ button.hover {
 
 #link {
   color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#description {
+  margin-top: -20px;
+  opacity: 0.6;
 }

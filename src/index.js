@@ -46,15 +46,15 @@ function showWeather(response) {
 
   let currentHumidity = response.data.main.humidity;
   let humidity = document.querySelector("#humi");
-  humidity.innerHTML = `Humidity: ${currentHumidity} %`;
+  humidity.innerHTML = `${currentHumidity} %`;
 
   let currentWind = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${currentWind} km/h`;
+  wind.innerHTML = `${currentWind} km/h`;
 
   let currentClouds = Math.round(response.data.clouds.all);
   let clouds = document.querySelector("#clouds");
-  clouds.innerHTML = `Clouds: ${currentClouds}%`;
+  clouds.innerHTML = `${currentClouds}%`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
