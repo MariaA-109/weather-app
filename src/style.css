@@ -93,6 +93,8 @@ a {
 
 button.hover {
   cursor: pointer;
+  color: black;
+  background-color: white;
 }
 
 .fa-solid {
