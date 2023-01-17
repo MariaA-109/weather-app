@@ -60,13 +60,6 @@ a {
   margin-left: -5px;
 }
 
-#fahrenheitDegree {
-  display: inline;
-  font-size: 30px;
-  font-family: "Patrick Hand", cursive;
-  text-decoration: none;
-}
-
 .cloud-icon-title {
   font-size: 60px;
 }
