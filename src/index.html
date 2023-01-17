@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
@@ -28,7 +28,7 @@
     ></script>
     <title>Weather App</title>
   </head>
-  
+
   <body class="background">
     <div class="container">
       <form class="d-flex" id="cityForm" role="search">
@@ -39,36 +39,47 @@
           aria-label="Search"
           id="currentCity"
         />
-       <button class="btn-outline-success" id="searchCity" type="submit"> Search</button>
-       <button class="current-location-button" id="locationButton" >Current</button>  
+        <button class="btn-outline-success" id="searchCity" type="submit">
+          Search
+        </button>
+        <button class="current-location-button" id="locationButton">
+          Current
+        </button>
       </form>
-       
-      
       <br />
       <br />
       <h1 id="city">Berlin</h1>
       <ul>
-        <li class="date"> 20 Diciembre 20:04</li>
+        <li class="date">20 Diciembre 20:04</li>
         <li id="description">clouded</li>
       </ul>
-      <span><img src="" id="icon" alt="Clear" class="float-right" /></span>
-      <h2 class="subtitle" id="temperature"> 4 </h2> 
-      <a href="#" id="celsiusDegree"> °C</a> <h2>|</h2> 
-      <a href="#" id="fahrenheitDegree"> °F</a> 
+      <span>
+        <img src="" id="icon" alt="Clear" class="float-right" />
+      </span>
+      <h2 class="subtitle" id="temperature">4</h2>
+      <a href="#" id="celsiusDegree"> °C</a>
+      <h2>|</h2>
+      <a href="#" id="fahrenheitDegree"> °F</a>
       <br />
-      
-      <div class="row text-center">
-        <div class="col" id= humi >Humidity: 95%</div>
-        <div class="col" id= wind >Wind: 3km/h</div>
-        <div class="col" id= clouds >Clouds: 2</div>
+      <div class="col-6">
+        <ul>
+          <li class="col" id="humi">Humidity: 95%</li>
+          <li class="col" id="wind">Wind: 3km/h</li>
+          <li class="col" id="clouds">Clouds: 2</li>
+        </ul>
       </div>
       <br />
       <br />
       <div class="weather-forecast" id="forecast"></div>
-      <br>
-      <div class="footer">
-      <small> <a href="https://github.com/MariaA-109/weather-app" id="link"> Open-source code</a>by Alexandra A.</small>
-      </div>
-      <script src="src/index.js"></script>
-    </body>
+      <br />
+    </div>
+    <div class="footer">
+      <small>
+        <a href="https://github.com/MariaA-109/weather-app" id="link">
+          Open-source code</a
+        >by Alexandra A.
+      </small>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>

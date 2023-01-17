@@ -33,11 +33,38 @@ if (currentMinute < 10) {
 let inputDate = document.querySelector(".date");
 inputDate.innerHTML = `${currentDay} ${currentDate} ${currentMonth} ${currentHour} : ${currentMinute}`;
 
-function getForecast(coordinates) {
-  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showForecast);
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
+
+//function getForecast(coordinates) {
+// let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+// let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+//axios.get(apiUrl).then(showForecast);
+//}
 
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -67,8 +94,6 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  getForecast(response.data.coord);
 }
 
 function inputCity(event) {
@@ -103,6 +128,7 @@ function getCurrentLocation(event) {
 let searchButton = document.querySelector("#searchCity");
 searchButton.addEventListener("click", inputCity);
 search("Berlin");
+displayForecast();
 
 let locationButton = document.querySelector("#locationButton");
 locationButton.addEventListener("click", getCurrentLocation);
