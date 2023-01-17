@@ -4,7 +4,7 @@ body {
   font-size: 25px;
   padding: 50px;
   border: 1px solid #a2a5a8;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   margin-top: 30px;
 }
@@ -20,7 +20,7 @@ body {
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   opacity: 0.8;
   background-position: absolute;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 30px;
   background-repeat: no-repeat;

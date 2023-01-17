@@ -52,7 +52,6 @@ function displayForecast(response) {
         `
   <div class="col-2">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-        ${index}
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
@@ -152,15 +151,6 @@ search("Berlin");
 
 let locationButton = document.querySelector("#locationButton");
 locationButton.addEventListener("click", getCurrentLocation);
-
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (14 * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
