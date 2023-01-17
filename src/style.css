@@ -44,7 +44,7 @@ h2 {
 .subtitle {
   font-size: 60px;
   font-family: "Patrick Hand", cursive;
-  line-height: 0.5;
+  line-height: 0.5px;
   margin-left: 15px;
 }
 
@@ -114,9 +114,10 @@ button.hover {
 }
 
 ul {
+  text-align: left;
   display: block;
-  margin-top: -180px;
-  margin-left: 400px;
+  margin-top: -160px;
+  margin-left: 300px;
 }
 
 li {
