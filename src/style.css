@@ -55,9 +55,8 @@ a {
 #celsiusDegree {
   display: inline;
   font-size: 30px;
-  font-family: "Patrick Hand", cursive;
-  text-decoration: none;
-  margin-left: -5px;
+  font-family: "Patrick Hand";
+  padding: 5px;
 }
 
 .cloud-icon-title {
