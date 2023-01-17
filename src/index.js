@@ -145,9 +145,9 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+let locationButton = document.querySelector("#locationButton");
+locationButton.addEventListener("click", getCurrentLocation);
+
 let searchButton = document.querySelector("#searchCity");
 searchButton.addEventListener("click", inputCity);
 search("Berlin");
-
-let locationButton = document.querySelector("#locationButton");
-locationButton.addEventListener("click", getCurrentLocation);
