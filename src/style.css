@@ -63,6 +63,7 @@ a {
 
 .cloud-icon-title {
   font-size: 60px;
+  margin-left: 25px;
 }
 
 .btn-outline-success {
@@ -106,7 +107,7 @@ button.hover {
 
 .float-right {
   margin-bottom: 30px;
-  margin-left: 90px;
+  margin-left: 150px;
 }
 
 #link {
@@ -117,7 +118,7 @@ ul {
   text-align: left;
   display: block;
   margin-top: -160px;
-  margin-left: 300px;
+  margin-left: 350px;
 }
 
 li {
@@ -139,6 +140,6 @@ li {
   background-color: #dbd8e3;
   text-align: center;
   padding: 10px 10px 10px 10px;
-  margin-left: 12px;
+  margin-left: 10px;
   border-radius: 5px;
 }
