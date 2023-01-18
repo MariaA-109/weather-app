@@ -6,7 +6,6 @@ body {
   width: 60%;
   margin: auto;
   margin-top: 30px;
-  max-width: 1223px;
 }
 
 .background {
@@ -112,9 +111,9 @@ button.hover {
 
 ul {
   text-align: left;
-  display: block;
-  margin-top: auto;
-  margin-left: auto;
+  position: relative;
+  margin-top: -25%;
+  margin-left: 40%;
 }
 
 li {
