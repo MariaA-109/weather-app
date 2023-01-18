@@ -3,13 +3,11 @@ body {
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 25px;
   padding: 50px;
-  border: 1px solid #a2a5a8;
-  width: 80%;
-  max-width: 1000px;
+  width: 60%;
   margin: auto;
   margin-top: 30px;
-  border-radius: 5px;
 }
+
 .background {
   background-image: url("images/eberhard-grossgasteiger-NvesrDbsrL4-unsplash.jpg");
   background-repeat: no-repeat;
