@@ -6,6 +6,7 @@ body {
   width: 60%;
   margin: auto;
   margin-top: 30px;
+  max-width: 1223px;
 }
 
 .background {
@@ -24,9 +25,8 @@ body {
   );
   opacity: 0.8;
   background-position: absolute;
-  width: 100%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 3%;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
@@ -94,7 +94,7 @@ button.hover {
 }
 
 .fa-solid {
-  padding: 20px;
+  padding: 5%;
 }
 .d-flex {
   border: 5px;
@@ -102,7 +102,7 @@ button.hover {
 }
 
 .float-right {
-  margin-bottom: 30px;
+  margin-bottom: 3%;
   margin-left: 12%;
 }
 
@@ -113,8 +113,8 @@ button.hover {
 ul {
   text-align: left;
   display: block;
-  margin-top: -26%;
-  margin-left: 45%;
+  margin-top: auto;
+  margin-left: auto;
 }
 
 li {
@@ -124,12 +124,12 @@ li {
 }
 
 #description {
-  margin-top: -20px;
+  margin-top: -2%;
   opacity: 0.6;
 }
 
 .date {
-  margin-top: 20px;
+  margin-top: 2%;
 }
 
 .weather-forecast {
