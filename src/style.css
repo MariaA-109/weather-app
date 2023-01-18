@@ -39,13 +39,11 @@ h1 {
   font-size: 100px;
   color: black;
   font-family: "Patrick Hand", cursive;
-  width: 10%;
 }
 h2 {
   display: inline-block;
   font-size: 30px;
   font-family: "Patrick Hand", cursive;
-  width: 10%;
 }
 
 .subtitle {
@@ -55,17 +53,10 @@ h2 {
   margin-left: 1%;
 }
 
-a {
-  display: inline;
-  text-align: center;
-  padding: 10px;
-}
-
 #celsiusDegree {
   display: inline;
   font-size: 30px;
   font-family: "Patrick Hand";
-  padding: 3px;
 }
 
 .cloud-icon-title {
@@ -124,8 +115,8 @@ button.hover {
 ul {
   text-align: left;
   display: block;
-  margin-top: -25%;
-  margin-left: 40%;
+  margin-top: -26%;
+  margin-left: 45%;
 }
 
 li {
