@@ -2,10 +2,6 @@ body {
   opacity: 100;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 25px;
-  padding: 50px;
-  width: 60%;
-  margin: auto;
-  margin-top: 30px;
 }
 
 .background {
@@ -15,7 +11,7 @@ body {
   background-attachment: fixed;
 }
 .container {
-  padding: 50px;
+  padding: 5%;
   text-overflow: unset;
   background: radial-gradient(
     circle at 0% 0.5%,
@@ -24,7 +20,7 @@ body {
   );
   opacity: 0.8;
   background-position: absolute;
-  margin: auto;
+
   margin-top: 3%;
   background-repeat: no-repeat;
   background-size: cover;
