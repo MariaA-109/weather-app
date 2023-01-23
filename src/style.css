@@ -20,7 +20,9 @@ body {
   );
   opacity: 0.8;
   background-position: absolute;
-
+  min-width: 60%;
+  max-width: fit-content;
+  max-height: min-content;
   margin-top: 3%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,12 +44,14 @@ h2 {
 .subtitle {
   font-size: 60px;
   font-family: "Patrick Hand", cursive;
+  padding: 2%;
 }
 
 #celsiusDegree {
   display: inline;
   font-size: 30px;
   font-family: "Patrick Hand";
+  padding: 1%;
 }
 
 .cloud-icon-title {
@@ -95,18 +99,18 @@ button.hover {
 }
 
 .float-right {
-  margin-bottom: 3%;
-  margin-left: 12%;
+  padding: 2%;
 }
 
 #link {
   color: black;
 }
-
+ul {
+  margin-top: -10%;
+}
 li {
   list-style: none;
   display: inline;
-  margin: auto;
 }
 
 #description {
@@ -121,7 +125,7 @@ li {
 .weather-forecast {
   background-color: #dbd8e3;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  padding: 5px 5px 5px 5px;
   margin-left: 1%;
   border-radius: 5px;
 }
