@@ -106,7 +106,7 @@ button.hover {
 li {
   list-style: none;
   display: inline;
-  margin-left: 9%;
+  margin: auto;
 }
 
 #description {
