@@ -107,15 +107,13 @@ button.hover {
 
 ul {
   text-align: left;
-  position: relative;
+  position: sticky;
   margin-top: -20%;
   margin-left: 40%;
 }
 
 li {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 #description {
