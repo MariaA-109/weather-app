@@ -42,8 +42,6 @@ h2 {
 .subtitle {
   font-size: 60px;
   font-family: "Patrick Hand", cursive;
-  line-height: 0.5px;
-  margin-left: 1%;
 }
 
 #celsiusDegree {
@@ -105,15 +103,10 @@ button.hover {
   color: black;
 }
 
-ul {
-  text-align: left;
-  position: sticky;
-  margin-top: -20%;
-  margin-left: 40%;
-}
-
 li {
   list-style: none;
+  display: inline;
+  margin-left: 9%;
 }
 
 #description {
