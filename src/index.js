@@ -136,7 +136,6 @@ function searchLocation(position) {
   axios.get(apiUrl).then(showWeather);
 
   let currentH1 = document.querySelector("#city");
-  currentH1.innerHTML = position.data.name;
 }
 
 function getCurrentLocation(event) {
@@ -147,6 +146,6 @@ function getCurrentLocation(event) {
 let locationButton = document.querySelector("#locationButton");
 locationButton.addEventListener("click", getCurrentLocation);
 
-let searchButton = document.querySelector("#searchCity");
-searchButton.addEventListener("click", inputCity);
+let searchButton = document.querySelector("#cityForm");
+searchButton.addEventListener("submit", inputCity);
 search("Berlin");
