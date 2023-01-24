@@ -132,7 +132,7 @@ function search(typedCity) {
 
 function searchLocation(position) {
   let apiKey = "97f8e93f00107773f88eafd933ce86b7";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?lon=${position.coords.longitude}&lat=${position.coords.latitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lon=${position.coords.longitude}&lat=${position.coords.latitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 
   let currentH1 = document.querySelector("#city");
